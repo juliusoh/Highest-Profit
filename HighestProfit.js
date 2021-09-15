@@ -29,5 +29,5 @@ fs.createReadStream(inputFile)
     const top20Results = validNumericResults.sort((a, b) => {
       return b["Profit (in millions)"] - a["Profit (in millions)"]
     }).slice(0, 20)
-    console.log('Top 20 rows with highest profit values', top20Results, `${top20Results.length} number of results`)
+    console.log('Top 20 rows with highest profit values', top20Results)
   });
