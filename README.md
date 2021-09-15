@@ -30,8 +30,8 @@ node HighestProfit.js
 
 Result produced the number of rows in the .csv file, number of rows after filtered non numeric values, and the top 20 companies with the highest profit (in millions).
 
-I used node module: csv-parser to convert CSV into JSON at rate of around 90,000 rows per second. The csv data was parsed into an empty array called results.
-I applied the .filter() array method which "creates a new array with all elements that pass the test implemented by the provided function"(MDN web docs), in my case does Profit equal to a NaN which determines if a value is a number or not. Before implementing the filter method, I mutated the Profit values into a Number type in order to implement the filter method above. 
+I used node module: csv-parser to convert CSV into JSON at rate of around 90,000 rows per second. The csv data was parsed into an empty array called results. Then I 
+I applied the .filter() array method which "creates a new array with all elements that pass the test implemented by the provided function"(MDN web docs), in my case does Profit equal to a NaN which determines if a value is a number or not. Before implementing the filter method, I mutated the Profit values into a Number type in order to implement the filter method above. And after filtering, i used .writeFile() method of the filesystem which "Asynchronously writes data to a file, replacing the file if it already exists. data can be a string, a buffer, an <AsyncIterable> or <Iterable> object, or an object with an own toString function property. The promise is resolved with no arguments upon success." (NodeJS docs) to create new file "data2.json" with the new filtered results.
 
 The .length method will give back the number of objects and in this case the number of rows.
 
