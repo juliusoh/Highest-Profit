@@ -32,7 +32,10 @@ Result produced the number of rows in the .csv file, number of rows after filter
 
 I used node module: csv-parser to convert CSV into JSON at rate of around 90,000 rows per second. The csv data was parsed into an empty array called results.
 I applied the .filter() array method which "creates a new array with all elements that pass the test implemented by the provided function"(MDN web docs), in my case does Profit equal to a NaN which determines if a value is a number or not. Before implementing the filter method, I mutated the Profit values into a Number type in order to implement the filter method above. 
+
 The .length method will give back the number of objects and in this case the number of rows.
+
 After filtering out the non-numeric values, i used a sort() array method which "sorts the elements of an array in place and returns the sorted array." (MDN docs).
 And in this case compares the second element to the first element. 
+
 And after sorting the results, I applied a .slice() method which "method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array." (MDC Docs). So in this case starting from the first index (since its the highest) to end 20th index since the 20th index is not included so stops at 20th index.
